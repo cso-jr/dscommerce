@@ -2,11 +2,14 @@ package com.devsuperior.dscommerce.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -23,11 +26,12 @@ public class User implements Serializable{
 	private LocalDate birthDate;
 	private String password;
 	
+	@OneToMany(mappedBy = "client")
+	private List<Order> orders = new ArrayList<>();
+	
 	public User() {
 		
 	}
-
-
 
 	public User(Long id, String name, String email, String phone, LocalDate birthDate, String password) {
 		super();
@@ -38,8 +42,6 @@ public class User implements Serializable{
 		this.birthDate = birthDate;
 		this.password = password;
 	}
-
-
 
 	public Long getId() {
 		return id;
@@ -65,40 +67,32 @@ public class User implements Serializable{
 		this.email = email;
 	}
 
-
-
 	public String getPhone() {
 		return phone;
 	}
-
-
 
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
-
-
 	public LocalDate getBirthDate() {
 		return birthDate;
 	}
-
-
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
-
-
 	public String getPassword() {
 		return password;
 	}
 
-
-
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<Order> getOrders() {
+		return orders;
 	}
 
 }
