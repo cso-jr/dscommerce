@@ -20,6 +20,5 @@ public interface UserRepository extends JpaRepository<User, Long>{
 		""")
 	List<UserDetailsProjection> searchUserAndRolesByEmail(String email);
 
-	User findByEmail(String username);
 	
 }
