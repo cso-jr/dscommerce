@@ -98,7 +98,9 @@ public class Order implements Serializable{
 		return items.stream().map(x -> x.getProduct()).toList();
 	}
 
-
+	public Payment getPayment() {
+		return payment;
+	}
 
 	@Override
 	public int hashCode() {
@@ -118,6 +120,8 @@ public class Order implements Serializable{
 		Order other = (Order) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
+
+
 	
 }
