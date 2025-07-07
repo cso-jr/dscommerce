@@ -34,11 +34,17 @@ public class OrderService {
 	@Autowired
 	private OrderItemRepository orderItemRepository;
 	
+	@Autowired
+	private AuthService authService;
+	
 	@Transactional(readOnly = true)
 	public OrderDTO findById(Long id) {
 		Optional<Order> result = repository.findById(id); //Optional recebe resultado da buscar por id a partir do id
 		Order order = result.orElseThrow(
 				() -> new ResourceNotFoundException("Recurso não encontrado.")); // Product product recebe o resultado (objeto) que esta no Optional OU lança uma exceção personalizada.
+		//antes de retornar, tem que testar (ou é admin ou é o dono do pedido)
+		authService.validadeSelfOrAdmin(order.getClient().getId());
+		//tudo certo, vida que segue. Caso contrário, authService lança exceção, corta execução.
 		OrderDTO dto = new OrderDTO(order); // productDTO recebe uma copia do Product que era resultado da busca por id
 		return dto; // e o método devolve um ProductDTO dto  para o controller que chamou o service ao invés de um Product da camada de entidades
 	}
