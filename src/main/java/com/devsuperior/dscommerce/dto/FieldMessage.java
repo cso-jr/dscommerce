@@ -20,6 +20,4 @@ public class FieldMessage {
 		return messsage;
 	}
 	
-	
-	
 }

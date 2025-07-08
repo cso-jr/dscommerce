@@ -121,7 +121,4 @@ public class Order implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-
-
-	
 }

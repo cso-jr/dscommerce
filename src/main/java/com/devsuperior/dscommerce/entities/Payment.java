@@ -72,7 +72,6 @@ public class Payment {
 		Payment other = (Payment) obj;
 		return Objects.equals(id, other.id);
 	}
-		
 	
 }
 

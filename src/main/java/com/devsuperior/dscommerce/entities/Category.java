@@ -70,6 +70,4 @@ public class Category {
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
 }

@@ -56,7 +56,5 @@ public class UserDTO {
 	public List<String> getRoles() {
 		return roles;
 	}
-	
-	
-	
+
 }
