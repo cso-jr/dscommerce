@@ -26,4 +26,5 @@ Plataforma de e-commerce desenvolvida durante o curso Java Professional
 ## Diagrama:
 <img width="891" height="438" alt="dscommerceDiagram" src="https://github.com/user-attachments/assets/69425206-336c-4dc6-814f-7d36228e1bd1" />
 
-## 
+## Resposta de consulta a um pedido (orderItem) do próprio usuário logado:
+<img width="1504" height="917" alt="orderItem" src="https://github.com/user-attachments/assets/8b9d0192-2b7f-4f26-a16a-838a0d9131b1" />
