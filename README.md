@@ -8,13 +8,13 @@ Plataforma de e-commerce desenvolvida durante o curso Java Professional
 - É possível  incluir ou remover do carrinho e alterar quantidades de cada item;
 - Ao encerrar o pedido, ele é salvo com status "aguardando pagamento";
 - Ao realizar o pagamento, o instante é registrado;
-- usuários podem ser clientes ou administradores
+- usuários podem ser clientes ou administradores.
 
 ## Recursos, Tecnologias, Ferramentas e Técnicas Utilizadas:
 - Spring Boot Framework, utilizando Maven como gerenciador de dependências;
 - Banco de dados H2 para teste e PostgreSQL para desenvolvimento;
 - Postman para teste dos endpoints com resposta em formato JSON;
-- Autenticação de usuário com JWT;
+- Autenticação de usuário com OAuth2-JWT;
 - Modelo de domínio com relacionamentos muitos-para-muitos, muitos-para-um;
 - CRUD de categorias, produtos e usuários;
 - Usuários com um ou mais "Roles" (client, admin) como perfil de acesso;
